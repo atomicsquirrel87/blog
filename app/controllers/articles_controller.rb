@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  def landing_page
+    @articles = Article.all
+  end
+
   # GET /articles/new
   def new
     @article = Article.new
