@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <h2><%= @article.title %></h2>
+        <p>Published: <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+        <h4><%= @article.header %></h4>
+        <p><%= @article.body %></p>
+        <%= link_to root_path do %><p>Back</p><% end %>
+      </div><!-- /col -->
+  </div>
+</div>

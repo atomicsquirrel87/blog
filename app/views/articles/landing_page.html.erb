@@ -1,14 +1,6 @@
-<h1>Articles</h1>
+<h1 class="center">Caesar's Blog Berlin</h1>
+<%= image_tag("bild1.jpg", class: "img-responsive") %>
 
-<div class="container-fluid">
-  <div class="row">
-    <% @articles.each do |article| %>
-      <div class="col-sm-12 col-md-12">
-        <h2><%= article.title %></h2>
-        <%= article.created_at.strftime("%B %d %Y, %l:%M%P") %>
-        <h3><%= article.header %></h3>
-        <%= link_to 'Show', article %>
-      </div><!-- /col -->
-    <% end %>
-  </div>
-</div>
+<h1 class="center">Articles</h1>
+
+<%= render partial: "landing_page" %>

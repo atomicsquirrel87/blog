@@ -12,17 +12,21 @@
 
   <body>
 
+
     <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", simple_pages_about_path %></li>
-        <li><%= link_to "Contact", simple_pages_contact_path %></li>
+      <ul class="nav nav-pills">
+        <li role="presentation"><%= link_to root_path do %><p>Home</p><%end%></li>
+        <li role="presentation"><%= link_to simple_pages_about_path do %><p>About</p><%end%></li>
+        <li role="presentation"><%= link_to simple_pages_contact_path do %><p>Contact</p><%end%></li>
       </ul>
     </nav>
-    <%= yield %>
+
+    <div class="content">
+      <%= yield %>
+    </div><!--end content-->
 
     <footer>
-      &copy; 2018 CaesarBlogBerlin
+      &copy; 2018 Caesar'sBlogBerlin
     </footer>
   </body>
 </html>

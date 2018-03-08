@@ -1,3 +1,56 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  background-color: #232627;
+}
+
+footer {
+  margin-top: 2em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.content {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  background-color: #4B4B4B;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+footer {
+  color: #FFDCB2;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+li p {
+  margin: 0;
+}
