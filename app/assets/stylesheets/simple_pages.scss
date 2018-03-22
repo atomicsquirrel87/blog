@@ -43,7 +43,8 @@ h1,
 h2,
 h3,
 h4,
-footer {
+footer,
+.standard-color {
   color: #FFDCB2;
 }
 
@@ -65,4 +66,8 @@ li p {
   #search-button {
   margin-top: 0.5em;
   }
+}
+
+.panel-body {
+  background-color: black;
 }
