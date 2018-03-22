@@ -12,6 +12,13 @@
 
   <body>
 
+    <% if alert %>
+      <div class="alert alert-warning" role="alert"><%= alert %></div>
+    <% end %>
+    <% if notice %>
+      <div class="alert alert-warning" role="alert"><%= flash[:notice] %></div>
+    <% end %>
+
 
     <nav class="navbar navbar-inverse navbar-fixed top" role="navigation">
       <div class="container-fluid">
@@ -38,6 +45,14 @@
                 <li role="presentation"><%= link_to "Home", root_path %></li>
                 <li role="presentation"><%= link_to "About", simple_pages_about_path %></li>
                 <li role="presentation"><%= link_to "Contact", simple_pages_contact_path %></li>
+                <li role="presentation"><%= link_to "User", users_path %></li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                  <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                  <% end %>
+                </li>
               </ul>
             </div><!--end nav-->
           </div><!--end nav container-->

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="center">User</h1>
+
+
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <%= link_to 'New User', new_user_path, class: "btn btn-default" %></br>
+      <% @users.each do |user| %>
+        </br>
+        <p><strong>Username:</strong> <%= user.alias_name %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <%= link_to 'Show', user %> | <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </br>
+      <% end %>
+    </div><!-- end col-md-4 -->
+  </div><!-- end row -->

@@ -2,7 +2,7 @@
   <div class="row">
     <% @articles.each do |article| %>
       <div class="col-sm-2 col-md-4">
-        <h2><%= article.title %></h2>
+        <h2 class="underline"><%= article.title %></h2>
         <h3><%= article.header %></h3>
         <p><%= article.body %></p>
         <%= link_to 'Show', article %>
