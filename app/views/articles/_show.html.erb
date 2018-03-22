@@ -2,6 +2,7 @@
   <div class="row">
       <div class="col-sm-12 col-md-12">
         <h2><%= @article.title %></h2>
+        <p>Average Rating: <div class="rated" data-score="<%= @article.average_rating %>"></div> </p>
         <p>Published: <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
         <h4><%= @article.header %></h4>
         <p><%= @article.body %></p>

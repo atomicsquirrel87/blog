@@ -8,17 +8,18 @@ class ArticlesController < ApplicationController
       search_term = params[:q]
       @articles = Article.search(search_term)
     else
-      @articles = Article.all
+      @articles = Article.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
     end
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @comments = @article.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   def landing_page
-    @articles = Article.all
+    @articles = Article.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /articles/new
