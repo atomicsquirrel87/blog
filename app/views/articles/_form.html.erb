@@ -11,22 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :article_title %>
-  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= form.label :title, class:"standard-color" %>
+        <%= form.text_field :title, id: :article_title, required: true, class:"form-control" %>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= form.label :header, class:"standard-color" %>
+        <%= form.text_area :header, id: :article_header, required: true, class:"form-control" %>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= form.label :body, class:"standard-color" %>
+        <%= form.text_area :body, id: :article_body, required: true, class:"form-control",  rows: 5 %>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= form.submit :Submit, class:"btn btn-default" %>
+      </div><!-- end form-group -->
+    </div>
+  </div><!-- end row -->
 
-  <div class="field">
-    <%= form.label :header %>
-    <%= form.text_area :header, id: :article_header %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :article_body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

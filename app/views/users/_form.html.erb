@@ -16,18 +16,18 @@
     <div class="col-md-4">
       <div class="form-group">
         <%= form.label :first_name, class:"standard-color" %>
-        <%= form.text_field :first_name, id: :user_first_name %>
+        <%= form.text_field :first_name, id: :user_first_name, class:"form-control" %>
       </div><!-- end form-group -->
       <div class="form-group">
         <%= form.label :last_name, class:"standard-color" %>
-        <%= form.text_field :last_name, id: :user_last_name %>
+        <%= form.text_field :last_name, id: :user_last_name, class:"form-control" %>
       </div><!-- end form-group -->
       <div class="form-group">
         <%= form.label :alias_name, class:"standard-color" %>
-        <%= form.text_field :alias_name, id: :user_alias_name %>
+        <%= form.text_field :alias_name, id: :user_alias_name, class:"form-control" %>
       </div><!-- end form-group -->
       <div class="form-group">
-        <%= form.submit %>
+        <%= form.submit :Submit, class:"btn btn-default" %>
       </div><!-- end form-group -->
     </div><!-- end col-md-4 -->
   </div><!-- end row -->

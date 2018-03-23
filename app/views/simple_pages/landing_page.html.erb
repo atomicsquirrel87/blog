@@ -1,0 +1,6 @@
+<h1 class="center">Caesar's Blog Berlin</h1>
+<%= image_tag("bild1.jpg", class: "img-responsive") %>
+<%= render partial: "landing_page" %>
+<div class="center">
+  <%= will_paginate @articles %>
+</div>

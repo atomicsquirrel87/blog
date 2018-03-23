@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
       search_term = params[:q]
       @articles = Article.search(search_term)
     else
-      @articles = Article.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+      @articles = Article.order("created_at DESC")
     end
   end
 
